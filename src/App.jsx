@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./CrimpdleClone.css";
+import "./style.css";
 
 function getDailyIndex(arrayLength) {
   const epoch = new Date("2025-01-01").getTime();
