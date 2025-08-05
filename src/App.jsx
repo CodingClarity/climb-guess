@@ -44,7 +44,7 @@ function App() {
         title="climb"
         width="560"
         height="315"
-        src={\`https://www.youtube.com/embed/\${picked.id}\`}
+        src={`https://www.youtube.com/embed/${picked.id}`}
         allowFullScreen
       />
       {!submitted ? (
