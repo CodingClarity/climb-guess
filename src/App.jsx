@@ -39,29 +39,37 @@ function App() {
   if (!picked) return <div>Loading...</div>;
 
   return (
-    <div className="app">
-      <h1>Guess That Climb!</h1>
+    <div className="style-container">
+      <div className="style-box">
+      <h1 className="style-title">Guess the Climbing Grade</h1>
+      <div className="video-wrapper">
       <iframe
-        title="climb"
-        width="560"
-        height="315"
-        src={`https://www.youtube.com/embed/${picked.id}`}
-        allowFullScreen
-      />
-      {!submitted ? (
-        <div>
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${picked.id}`}
+            title="Climbing video"
+            frameBorder="0"
+            allowFullScreen
+          />
+      </div>
+      <form onSubmit={handleSubmit} className="guess-form">
           <input
-            placeholder="Your guess (e.g. V7, 7b+)"
+            type="text"
             value={guess}
             onChange={(e) => setGuess(e.target.value)}
+            placeholder="Enter your guess (e.g., V5)"
+            className="guess-input"
           />
-          <button onClick={handleSubmit}>Submit</button>
-        </div>
-      ) : (
-        <div>{feedback}</div>
-      )}
+          <button type="submit" className="submit-btn">
+            Submit
+          </button>
+        </form>
+
+        {submitted && <p className="feedback">{feedback}</p>}
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default styles;
+     
