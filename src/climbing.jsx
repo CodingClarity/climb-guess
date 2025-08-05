@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./src/climbing.css";
+import './climbing.css';
 
 function getDailyIndex(arrayLength) {
   const epoch = new Date("2025-01-01").getTime();
