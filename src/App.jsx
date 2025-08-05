@@ -30,8 +30,8 @@ function App() {
     if (guess.trim().toUpperCase() === picked.grade.toUpperCase()) {
       setFeedback("Correct! You nailed it.");
     } else {
-      setFeedback('Incorrect. The grade was ${picked.grade}.');
-      // test
+      setFeedback('Incorrect. The grade was ');
+      // ${picked.grade}
     }
   };
 
