@@ -28,9 +28,9 @@ function App() {
   const handleSubmit = () => {
     setSubmitted(true);
     if (guess.trim().toUpperCase() === picked.grade.toUpperCase()) {
-      setFeedback("✅ Correct! You nailed it.");
+      setFeedback("Correct! You nailed it.");
     } else {
-      setFeedback(`❌ Incorrect. The grade was ${picked.grade}.`);
+      setFeedback("Incorrect. The grade was ${picked.grade}.");
     }
   };
 
